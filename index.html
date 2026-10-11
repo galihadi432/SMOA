@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMOA</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f5c3a'/><path d='M9 22c0-8 5-12 14-13-1 9-5 14-14 13z' fill='%23d9a93a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="masuk" class="masuk" hidden>
+  <form id="formMasuk" class="kartu masuk-kartu" autocomplete="on">
+    <div class="logo">SMOA</div>
+    <p class="muted">Sistem Manajemen Operasional Afdeling</p>
+    <label>Username<input name="username" autocomplete="username" required></label>
+    <label>Sandi<input name="sandi" type="password" autocomplete="current-password" required></label>
+    <button class="btn utama" type="submit">Masuk</button>
+    <p class="galat" id="galatMasuk" role="alert"></p>
+  </form>
+</section>
+
+<div id="aplikasi" class="aplikasi" hidden>
+  <aside class="sisi" id="sisi"><div class="logo">SMOA</div><nav id="menu"></nav>
+    <div class="sisi-bawah"><button class="btn tipis" id="tema" type="button">Tema gelap</button><button class="btn tipis" id="keluar" type="button">Keluar</button></div>
+  </aside>
+  <main class="isi">
+    <header class="atas"><button class="btn tipis hamburger" id="buka" type="button" aria-label="Menu">☰</button><h1 id="judul"></h1><span class="muted" id="pengguna"></span></header>
+    <div id="halaman" class="halaman"></div>
+    <footer class="kaki">© Galih Adi Prasetyo</footer>
+  </main>
+</div>
+<div id="modal" class="modal" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
